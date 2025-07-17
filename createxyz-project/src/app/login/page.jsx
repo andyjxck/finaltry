@@ -11,7 +11,7 @@ function MainComponent() {
   // Add useEffect for pageview tracking
   React.useEffect(() => {
     // Record pageview
-    fetch("/api/record-pageview", {
+    fetch("/src/api/record-pageview", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -29,7 +29,7 @@ function MainComponent() {
     setLoading(true);
 
     try {
-      const authResponse = await fetch("/api/auth-handler", {
+      const authResponse = await fetch("/src/api/auth-handler", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
